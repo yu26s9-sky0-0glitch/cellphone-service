@@ -7,6 +7,7 @@ public class CellPhone {
     private String phoneNumber;
     private String owner;
 
+
     public void setSerialNumber(String serialNumber){
         this.serialNumber = serialNumber;
     }
@@ -19,6 +20,7 @@ public class CellPhone {
     public void setPhoneNumber(String phoneNumber){
         this.phoneNumber = phoneNumber;
     }
+
     public void setOwner(String owner){
         this.owner= owner;
     }
@@ -36,6 +38,12 @@ public class CellPhone {
     }
     public String getOwner(){
         return this.owner;
+    }
+    public void dial(String phoneNumberToDial){
+        System.out.println(owner + "'s phone is dialing the number "+ phoneNumberToDial);
+    }
+    public void dial(CellPhone phone){
+        dial(phone.getPhoneNumber());
     }
 }
 
